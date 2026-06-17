@@ -421,6 +421,11 @@ h1 {
   width: 100%;
 }
 
+.blur-sensitive {
+  filter: blur(8px);
+  transform: scale(1.02);
+}
+
 .copy h2 {
   color: var(--primary-dark);
   font-size: clamp(2rem, 4vw, 3.15rem);
