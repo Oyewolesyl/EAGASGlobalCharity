@@ -722,6 +722,40 @@ h1 {
   text-transform: uppercase;
 }
 
+.official-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.official-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.official-card div {
+  padding: 1rem 1.15rem 1.2rem;
+}
+
+.official-card h3 {
+  color: var(--primary-dark);
+  font-family: var(--sans);
+  font-size: 1rem;
+  margin: 0 0 .35rem;
+}
+
+.official-card p {
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
 .founder-copy {
   background: var(--white);
   border-left: 4px solid var(--teal);
@@ -800,6 +834,11 @@ h1 {
   display: block;
   font-family: var(--serif);
   font-size: 1.15rem;
+}
+
+.identity-panel {
+  display: grid;
+  gap: 1rem;
 }
 
 .program-detail {
