@@ -63,6 +63,14 @@ document.querySelectorAll(".gallery-item").forEach((button) => {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = button.dataset.full || button.querySelector("img").src;
     lightboxImg.alt = button.querySelector("img").alt;
+    const source = lightboxImg.src;
+    const isPrivate =
+      source.includes("DAVEWITHKIDS") ||
+      source.includes("WHITEPERSONDAVEKIDS") ||
+      source.includes("WHITEDAVEKIDS") ||
+      source.includes("GROUPPHOTO") ||
+      source.includes("DAVEOVERSEEINGPLAY");
+    lightboxImg.classList.toggle("privacy-blur", isPrivate);
     lightbox.classList.add("open");
   });
 });

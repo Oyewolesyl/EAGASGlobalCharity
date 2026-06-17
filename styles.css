@@ -28,12 +28,30 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 img,
 video {
   display: block;
   max-width: 100%;
+}
+
+.hero video,
+.hero .hero-image,
+.video-frame video,
+.video-frame img,
+.photo-panel,
+.impact-card,
+.gallery-item,
+.news-card,
+.program-detail {
+  overflow: hidden;
+}
+
+.lightbox img.privacy-blur {
+  filter: blur(10px);
+  transform: scale(1.025);
 }
 
 a {
@@ -492,6 +510,12 @@ h1 {
   width: 100%;
 }
 
+.video-frame img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+
 .stories,
 .news-grid,
 .values-grid,
@@ -609,7 +633,9 @@ h1 {
 
 .page-hero::after {
   content: "";
-  background: var(--hero-bg, url("public/assets/photos/GROUPPHOTO.png")) center / cover;
+  background: var(--hero-bg, url("public/assets/photos/GROUPPHOTO-privacy.png")) center / cover;
+  filter: blur(10px);
+  transform: scale(1.04);
   opacity: .24;
   position: absolute;
   inset: 0;
