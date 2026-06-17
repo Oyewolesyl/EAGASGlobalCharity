@@ -50,11 +50,6 @@ video {
   overflow: hidden;
 }
 
-.lightbox img.privacy-blur {
-  filter: blur(10px);
-  transform: scale(1.025);
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -634,7 +629,7 @@ h1 {
 
 .page-hero::after {
   content: "";
-  background: var(--hero-bg, url("public/assets/photos/GROUPPHOTO-privacy.png")) center / cover;
+  background: var(--hero-bg, url("public/assets/photos/GROUPPHOTO.png")) center / cover;
   filter: blur(10px);
   transform: scale(1.04);
   opacity: .16;
