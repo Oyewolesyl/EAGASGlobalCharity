@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/programs", "destination": "/programs.html" },
+    { "source": "/impact", "destination": "/impact.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/news", "destination": "/news.html" },
+    { "source": "/get-involved", "destination": "/get-involved.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ]
+}
