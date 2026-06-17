@@ -689,14 +689,17 @@ h1 {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  position: sticky;
-  top: 118px;
 }
 
 .founder-portrait img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   width: 100%;
+}
+
+.founder-photo {
+  object-position: center top;
 }
 
 .founder-caption {
