@@ -136,6 +136,27 @@ select {
   color: var(--primary-dark);
   border-radius: var(--radius);
   font-weight: 800;
+  font-size: 0;
+  position: relative;
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle::before {
+  top: 15px;
+  box-shadow: 0 6px 0 currentColor;
+}
+
+.nav-toggle::after {
+  top: 27px;
 }
 
 .nav-links {
@@ -386,14 +407,6 @@ h1 {
   width: 100%;
 }
 
-.brand-float {
-  position: absolute;
-  right: -24px;
-  bottom: -34px;
-  width: min(220px, 38%);
-  filter: drop-shadow(0 18px 25px rgba(8, 59, 145, .18));
-}
-
 .copy h2 {
   color: var(--primary-dark);
   font-size: clamp(2rem, 4vw, 3.15rem);
@@ -407,7 +420,7 @@ h1 {
 .program-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 }
 
 .program-card,
@@ -423,26 +436,26 @@ h1 {
 .program-card {
   display: flex;
   flex-direction: column;
-  min-height: 255px;
-  padding: 1.2rem;
+  min-height: 220px;
+  padding: 1.35rem;
+  position: relative;
 }
 
-.program-icon {
-  align-items: center;
-  background: #e8f7f9;
-  border-radius: 999px;
-  color: var(--primary-dark);
-  display: inline-flex;
-  font-weight: 900;
-  height: 42px;
-  justify-content: center;
-  margin-bottom: 1rem;
-  width: 42px;
+.program-card::before {
+  content: "";
+  background: linear-gradient(90deg, var(--primary), var(--teal));
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .program-card h3 {
   color: var(--primary-dark);
-  font-size: 1.12rem;
+  font-family: var(--sans);
+  font-size: 1.08rem;
+  line-height: 1.35;
   margin: 0 0 .55rem;
 }
 
@@ -557,14 +570,7 @@ h1 {
 }
 
 .cta::after {
-  content: "";
-  background: url("public/assets/brand/booknobg.png") center / contain no-repeat;
-  bottom: -60px;
-  opacity: .2;
-  position: absolute;
-  right: 4%;
-  height: 290px;
-  width: 230px;
+  content: none;
 }
 
 .cta-inner {
@@ -912,11 +918,7 @@ h1 {
   }
 }
 
-@media (max-width: 1060px) {
-  .program-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
+@media (max-width: 760px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
@@ -975,11 +977,6 @@ h1 {
 
   .hero {
     min-height: 680px;
-  }
-
-  .brand-float {
-    right: 10px;
-    bottom: -22px;
   }
 }
 
