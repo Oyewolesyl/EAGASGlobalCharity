@@ -311,24 +311,6 @@ h1 {
   margin-top: 2rem;
 }
 
-.scroll-indicator {
-  align-items: center;
-  display: inline-flex;
-  gap: .5rem;
-  margin-top: 3rem;
-  color: rgba(255, 255, 255, .78);
-  font-size: .85rem;
-  font-weight: 700;
-}
-
-.scroll-indicator::before {
-  content: "";
-  border: 2px solid rgba(255, 255, 255, .72);
-  border-radius: 999px;
-  height: 30px;
-  width: 18px;
-}
-
 .section {
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
