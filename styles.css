@@ -421,8 +421,8 @@ h1 {
 
 .program-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.15rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
 
 .program-card,
@@ -438,25 +438,21 @@ h1 {
 .program-card {
   display: flex;
   flex-direction: column;
-  min-height: 220px;
-  padding: 1.35rem;
+  border-left: 4px solid var(--teal);
+  box-shadow: 0 18px 42px rgba(8, 59, 145, .07);
+  min-height: 180px;
+  padding: 1.35rem 1.4rem 1.25rem;
   position: relative;
 }
 
 .program-card::before {
-  content: "";
-  background: linear-gradient(90deg, var(--primary), var(--teal));
-  height: 4px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  content: none;
 }
 
 .program-card h3 {
   color: var(--primary-dark);
   font-family: var(--sans);
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   line-height: 1.35;
   margin: 0 0 .55rem;
 }
@@ -469,6 +465,7 @@ h1 {
 
 .program-card a {
   color: var(--primary);
+  font-size: .92rem;
   font-weight: 900;
   margin-top: auto;
 }
@@ -505,7 +502,7 @@ h1 {
 .brand-assets {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .brand-asset {
@@ -553,6 +550,13 @@ h1 {
 .value-card p,
 .contact-card p {
   color: var(--muted);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1rem;
 }
 
 .story-card h3,

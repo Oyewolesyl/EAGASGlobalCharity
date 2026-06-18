@@ -98,6 +98,23 @@ document.querySelectorAll("form[data-validate]").forEach((form) => {
     const honeypot = form.querySelector("[name='website']");
     if (honeypot && honeypot.value) return;
     const status = form.querySelector(".form-status");
+    if (form.matches("[data-contact-form]")) {
+      const data = new FormData(form);
+      const inquiryType = data.get("type") || "General inquiry";
+      const subject = `EAGAS inquiry: ${inquiryType}`;
+      const body = [
+        `Full name: ${data.get("name") || ""}`,
+        `Email: ${data.get("email") || ""}`,
+        `Phone: ${data.get("phone") || ""}`,
+        `Inquiry type: ${inquiryType}`,
+        "",
+        data.get("message") || ""
+      ].join("\n");
+      const recipient = form.dataset.recipient || "augustaakp60@gmail.com";
+      if (status) status.textContent = "Opening your email app with the inquiry prepared.";
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return;
+    }
     if (status) status.textContent = "Thank you. Your message is ready to be connected to the foundation inbox.";
     form.reset();
   });
