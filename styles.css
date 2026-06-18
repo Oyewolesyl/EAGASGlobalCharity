@@ -507,7 +507,9 @@ h1 {
 
 .video-frame video {
   aspect-ratio: 16 / 9;
+  filter: blur(6px);
   object-fit: cover;
+  transform: scale(1.018);
   width: 100%;
 }
 
@@ -515,6 +517,36 @@ h1 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   width: 100%;
+}
+
+.brand-assets {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.brand-asset {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  min-height: 190px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.brand-asset img {
+  max-height: 118px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.brand-asset span {
+  color: var(--primary-dark);
+  font-size: .88rem;
+  font-weight: 900;
+  margin-top: .7rem;
 }
 
 .stories,
@@ -1143,6 +1175,7 @@ h1 {
 
   .values-grid,
   .gallery-grid,
+  .brand-assets,
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1175,6 +1208,7 @@ h1 {
   .news-grid,
   .values-grid,
   .gallery-grid,
+  .brand-assets,
   .contact-grid,
   .impact-band,
   .credentials-grid,
