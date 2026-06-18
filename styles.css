@@ -184,6 +184,7 @@ select {
   color: #233246;
   font-size: .88rem;
   font-weight: 700;
+  white-space: nowrap;
   padding: .5rem .58rem;
 }
 
